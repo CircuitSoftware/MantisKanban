@@ -28,7 +28,7 @@ class MantisKanbanPlugin extends MantisPlugin {
         $this->description  = 'Advanced Kanban board view';
         $this->page         = 'config_page';
 
-        $this->version = '2.21';
+        $this->version = '2.0';
         
         $this->requires = array(
             'MantisCore'    => '2.0.0',
@@ -36,7 +36,7 @@ class MantisKanbanPlugin extends MantisPlugin {
 
         $this->author   = 'Joanna Chlasta, Stefan Moises, Joscha Krug, Andreas Lindner';
         $this->contact  = 'mantiskanban@mycircuit.net';
-        $this->url      = 'https://github.com/mantisbt-plugins/MantisKanban';
+        $this->url      = 'https://github.com/CircuitSoftware/MantisKanban';
     }
 
     function init() {
@@ -94,9 +94,11 @@ class MantisKanbanPlugin extends MantisPlugin {
     /**
      * Create the resource link to load the jQuery library.
      */
-    function resources( $p_event ) {
-            return '<script type="text/javascript" src="' . plugin_file( 'kanban.js' ) . '"></script>'.
-                   '<script type="text/javascript">var kanbanAjaxUrl = "' . plugin_page('kanban_ajax_request') . '";</script>';
+    function resources() {
+        
+        return '<link rel="stylesheet" type="text/css" href="' . plugin_file( 'kanban.css' ) . '" />
+               ' . '<script type="text/javascript" src="' . plugin_file( 'kanban.js' ) . '"></script>
+               ' . '<script type="text/javascript">var kanbanAjaxUrl = "' . plugin_page('kanban_ajax_request') . '";</script>';
     }
 
 }

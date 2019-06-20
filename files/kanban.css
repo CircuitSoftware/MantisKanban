@@ -1,24 +1,24 @@
-table.kanbanTable {
+.kanbanTable {
 		
 }
-table.kanbanTable tr {
+.kanbanTable tr {
 	vertical-align: top;
 }
-table.kanbanTable tr td {
+.kanbanTable tr td {
+	border-left: solid 2px white;
+	padding: 0 10px 0 0;
 	width: 250px;
-    padding: 0 10px 0 0;
-    border-left:solid 2px white;
 }
 
 
-#kanbanPage h1 {
+.kanbanTable h1 {
 	font: bold 23px Arial, serif;
 	line-height: 27px;
+	margin: 0;
 	text-align: center;
-    margin: 0;
 }
 
-#kanbanPage h2 {
+.kanbanTable h2 {
 	font: bold 14px Arial, serif;
 	line-height: 18px;
 	margin: 0 0 18px 0;
@@ -31,15 +31,16 @@ a.bold, a:active.bold, a:visited.bold, a:hover.bold {
 
 div.card {
 	background: #f6f6f6;
-	border-left: 3px solid #999;
-	clear:left;
-	float:left;
+	border: 1px solid #808080;
+	/*border-left: 0px solid #999;*/
+	/*box-shadow: 3px 3px 5px rgba(0,0,0,0.5);*/
+	clear:	left;
+	float:	left;
 	font: 10px Tahoma, Arial, sans-serif;
 	margin: 0 5% 9px 5px;
-	padding: 0;
+	padding: 5px;
 	line-height: 13px;
 	width: 95%;
-    box-shadow: 3px 3px 5px rgba(0,0,0,0.5);
 }
 
 div.card a {
@@ -56,7 +57,7 @@ div.card div {
 
 div.card div.owner {
 	background: #999;
-	float:right;
+	float: right;
 	margin: 1px;
 	padding: 3px 3px 3px 0;
 	text-align: center;
@@ -64,59 +65,74 @@ div.card div.owner {
 }
 
 div.card div.owner .img-wrap {
+	background:#ccc;
+	height: 28px;
 	margin: 0 auto;
-        width:28px;
-        height:28px;
-        background:#ccc;
+	width: 28px;
 }
 
 div.card a.bugLink {
+	color: black;
 	font: bold 11px Tahoma, sans-serif;
 	line-height: 18px;
-        color: black;
 }
 
 div.card a.bugLink.right {
-	float:right;
-        margin-right:5px;
+	float: right;
+	margin-right: 5px;
 }
 
 div.card div.summary {
 	font: 10px Arial, sans-serif;
+	font-weight: bold;
 	line-height: 1.5em;
 	overflow: hidden;
 	padding: 9px;
-        font-weight: bold;
 }
 
 div.card div.bugTime {
-	font-style:italic;
+	clear: both;
+	float: left;
+	font-style: italic;
 	line-height: 18px;
-        clear:both;
-        float:left;
-        padding-left:2px;
+	padding-left: 2px;
 }
 
 div.card div.info {
-	line-hegiht: 18px;
+	line-height: 18px;
 	padding: 4px 9px 5px 9px;	
 } 
 div.card div.info a {
 	margin: 0 5px 0 0;
 }
 
-div.cardBug { border-color: #c00; }
-div.cardBug div.owner { background: #c00; }
+div.cardBug { 
+	border-color: #c00; 
+}
+div.cardBug div.owner { 
+	background: #c00; 
+}
 
-div.cardFeature { border-color: #69f; }
-div.cardFeature div.owner { background: #69f; }
+div.cardFeature { 
+	border-color: #69f; 
+}
+div.cardFeature div.owner { 
+	background: #69f; 
+}
 
-div.cardDesign { border-color: #9c0; }
-div.cardDesign div.owner { background: #9c0; }
+div.cardDesign { 
+	border-color: #9c0; 
+}
+div.cardDesign div.owner { 
+	background: #9c0; 
+}
 
-div.cardEnhancement { border-color: #609; }
-div.cardEnhancement div.owner { background: #609; }
-
+div.cardEnhancement { 
+	border-color: #609; 
+}
+div.cardEnhancement div.owner { 
+	background: #609; 
+}
 
 
 /* SMX styles */
@@ -144,17 +160,24 @@ div.card div.priority span.status_90
     color: green;
 }
 
+.wip_exceeded{
+	color: #aa0000;
+}
+.wip_ok{
+	color: #008000;
+}
+
 td.alert {
     background-color: red;
 }
 td.projectHeader {
     background-color: #ddd;
-    padding: 5px;
-    margin: 5px;
+	margin: 5px;
+	padding: 5px;
 }
 div.headerProject {
-    font-weight: bold;
-    color: #ABABAB;
+	color: #ABABAB;
+	font-weight: bold;
 }
 td.totalSum {
     font-weight: bold;
@@ -176,4 +199,3 @@ tr.totalNums td {
     font-size: 9px;
     width: 90px;
 }
-

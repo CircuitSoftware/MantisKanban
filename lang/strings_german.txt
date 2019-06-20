@@ -25,6 +25,7 @@ $s_plugin_MantisKanban_projectdisplay = 'Projekte';
 $s_plugin_MantisKanban_project_nogroups = 'nicht gruppieren';
 $s_plugin_MantisKanban_project_groups = 'gruppieren';
 
+$s_plugin_MantisKanban_sort = 'Sortieren nach';
 $s_plugin_MantisKanban_sort_date_modified = 'Änderungsdatum';
 $s_plugin_MantisKanban_sort_priority_link = 'Priorität';
 
