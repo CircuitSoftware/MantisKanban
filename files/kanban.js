@@ -18,7 +18,7 @@ jQuery(document).ready(function(){
         
         jQuery.ajax({
             type: "POST",
-            url: kanbanAjaxUrl,
+            url: "<?php plugin_page('kanban_ajax_request') ?>",
             data: { entrypoint: "bug_update_status",
                     id:         ticketId,
                     new_status: targetColumnId,
