@@ -1,17 +1,14 @@
 Mantis Kanban
 =============
 
-This is a fork of the original MantisKanban plugin which can be found here: https://github.com/thinksentient/MantisKanban
-Since the plugin is not maintained and didn't work "out of the box" I've decided to fork, fix and extend it a bit.
+This is a fork of the modified MantisKanban plugin which can be found here: https://github.com/mantisbt-plugins/MantisKanban (Origin: https://github.com/thinksentient/MantisKanban)
+Since the plugin is not maintained anymore  I've decided to fork and extend it to work with MantisBT 2.x.
 
 Installation
 ------------
 
 __Prerequisites__
-* MantisBT 1.2 or higher
-* [jQuery plugin](https://github.com/mantisbt-plugins/jquery) 1.6.2 or higher
-
-Note: MantisBT 1.3 is currently [not supported](https://github.com/mantisbt-plugins/MantisKanban/issues/5)
+* MantisBT 2.0 or higher
 
 __Setup__
 *   Upload the "MantisKanban" folder to your Mantis "plugins" folder
@@ -20,6 +17,9 @@ __Setup__
 
 Changelog
 ---------
+__New features in version 2.0.:__
+*   compatibility with MantisBT 2.x
+
 __New features in version 1.2.:__
 *   make use of the default states
 *   filter directly in the kanban view
@@ -35,4 +35,3 @@ __New features in version 1.1.:__
 *   added "work in progress" limits per column - if limit is reached, the column becomes red
 *   made column titles multilingual
 *   uses the most important filters from the general list view in Mantis (selected user etc.)
-
