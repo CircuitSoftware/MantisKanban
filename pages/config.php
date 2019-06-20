@@ -14,48 +14,16 @@
 # You should have received a copy of the GNU General Public License
 # along with MantisBT.  If not, see <http://www.gnu.org/licenses/>.
 
-auth_reauthenticate( );
-access_ensure_global_level( config_get( 'manage_plugin_threshold' ) );
+//form_security_validate( 'config' );
 
-html_page_top( lang_get( 'plugin_format_title' ) );
+form_security_purge( plugin_page( 'config', true ) );
 
-print_manage_menu( );
+$t_redirect_url = plugin_page( 'config_page', true );
 
-?>
+layout_page_header( null, $t_redirect_url );
 
-<br />
-<form action="<?php echo plugin_page( 'config_edit' )?>" method="post">
-<?php echo form_security_field( 'plugin_kanban_config_edit' ) ?>
-<table align="center" class="width50" cellspacing="1">
+layout_page_begin();
 
-<tr>
-	<td class="form-title" colspan="3">
-		<?php echo lang_get( 'plugin_kanban_title' ) . ': ' . lang_get( 'plugin_kanban_config' )?>
-	</td>
-</tr>
+html_operation_successful( $t_redirect_url );
 
-<tr <?php echo helper_alternate_class( )?>>
-	<td class="category" width="60%">
-		<?php echo lang_get( 'plugin_kanban_columns' )?>
-	</td>
-	<td class="center" width="20%">
-		<label><input type="radio" name="kanban_simple_columns" value="1" <?php echo( ON == plugin_config_get( 'kanban_simple_columns' ) ) ? 'checked="checked" ' : ''?>/>
-			<?php echo lang_get( 'plugin_kanban_simple_columns' )?></label>
-	</td>
-	<td class="center" width="20%">
-		<label><input type="radio" name="kanban_simple_columns" value="0" <?php echo( OFF == plugin_config_get( 'kanban_simple_columns' ) ) ? 'checked="checked" ' : ''?>/>
-			<?php echo lang_get( 'plugin_kanban_combined_columns' )?></label>
-	</td>
-</tr>
-
-<tr>
-	<td class="center" colspan="3">
-		<input type="submit" class="button" value="<?php echo lang_get( 'change_configuration' )?>" />
-	</td>
-</tr>
-
-</table>
-</form>
-
-<?php
-html_page_bottom();
+layout_page_end();
