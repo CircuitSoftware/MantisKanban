@@ -32,7 +32,7 @@ class MantisKanbanPlugin extends MantisPlugin {
         
         $this->requires = array(
             'MantisCore' => '2.0.0',
-            'jQueryUI'   => '1.12.1',
+            'jQueryUI'   => '1.11.4',
         );
 
         $this->author  = 'Joanna Chlasta, Stefan Moises, Joscha Krug, Andreas Lindner';
